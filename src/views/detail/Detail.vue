@@ -161,7 +161,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
   #detail {
     position: relative;
     z-index: 10;

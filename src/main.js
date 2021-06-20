@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import FastClick from 'fastclick'
+import VueLazyload from 'vue-lazyload'
 
 
 import toast from 'components/common/toast'
@@ -14,9 +15,14 @@ Vue.prototype.$bus = new Vue()
 Vue.use(toast)
 
 
-// fastclick解决移动端300ms延迟 
+
+// fastclick解决移动端300ms延迟
 FastClick.attach(document.body)
 
+// 使用懒加载插件
+Vue.use(VueLazyload, {
+
+})
 
 Vue.config.productionTip = false
 
@@ -25,3 +31,9 @@ new Vue({
   router,
   store
 }).$mount('#app')
+
+
+
+
+
+
